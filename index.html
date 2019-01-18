@@ -12,40 +12,59 @@
       <div class="row">
 
       </div>
-      <div class="row">
-        <div class="well">
-          <h3>"What language should I study?"</h3>
-          <h3>"What should I do with my life?"</h3>
-          <h3>"Which Kardashian am I?"</h3>
-        </div>
-        <div class="well">
-          <h1>WORRY NO MORE</h1>
-          <p>Take this simple test to see which track is the right track for YOU.</p>
-        </div>
-        <div class="well">
-          <form id="name-form">
-            <label for="name-in">What is your name?</label>
-            <input id="name-in" class="form-control" type="text">
+      <div id="page-body" class="row">
+        <div id="first">
+          <div id="questions" class="well">
+            <h3>"What language should I study?"</h3>
+            <h3>"What should I do with my life?"</h3>
+            <h3>"Which Kardashian am I?"</h3>
+          </div>
+          <div id="intro" class="well">
+            <h1>WORRY NO MORE</h1>
+            <p>Take this simple test to see which track is the right track for YOU.</p>
+          </div>
+          <div id="nf-holder">
+            <form id="name-form">
+              <label for="name-in">What is your name?</label>
+              <input id="name-in" class="form-control" type="text">
 
-            <button type="submit" class="btn">Enter</button>
-          </form>
-          
-          <form id="test-form">
+              <button type="submit" class="btn">Enter</button>
+            </form>
+          </div>
+        </div>
+        <div id="second">
+          <form id="fb-form">
             <div class="form-group">
               <label for="fb-choice">Would you rather be in charge of the stage, or the unseen work behind the stage?</label>
-              <div class="fb-choice">
-                <p>Front</p>
-                <p>Behind</p>
+              <div id="fb-choice">
+                <p id="front">Front</p>
+                <p id="back">Behind</p>
               </div>
-              <input id="fb-choice" class="form-control" type="text">
             </div>
+          </form>
+        </div>
+        <div id="f-choice">
+          <form id="css-ruby-form">
             <div class="form-group">
+              <label for="css-ruby-choice">Are you completely opposed to working on the engine?</label>
+              <div id="fb-choice">
+                <p id="layout">No, but I prefer to spend my time on the layouts.</p>
+                <p id="engine">No. In fact, I spend a lot of time working on the engine!</p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="b-choice">
+          <form>
+            <div>
               <label for="name-in">What is your name?</label>
               <input id="name-in" class="form-control" type="text">
             </div>
-              <label for="name-in">What is your name?</label>
-              <input id="name-in" class="form-control" type="text">
-
+          </form>
+        </div>
+        <div id="size-choice">
+          <form>
+            <div>
               <label for="name-in">What is your name?</label>
               <input id="name-in" class="form-control" type="text">
 
