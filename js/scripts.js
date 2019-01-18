@@ -40,11 +40,19 @@ $(document).ready(function() {
         $("#app-choice").fadeOut();
         $("#result").fadeIn();
         $("#java-text").toggle();
+        if (preferCss) {
+          $("#css-optional").toggle();
+          $("#css-text").toggle();
+        };
       });
       $("#startup").click(function() {
         $("#app-choice").fadeOut();
         $("#result").fadeIn();
         $("#ruby-text").toggle();
+        if (preferCss) {
+          $("#css-optional").toggle();
+          $("#css-text").toggle();
+        };
       });
     });
     $("#server").click(function() {
@@ -54,17 +62,21 @@ $(document).ready(function() {
         $("#server-choice").fadeOut();
         $("#result").fadeIn();
         $("#c-sharp-text").toggle();
+        if (preferCss) {
+          $("#css-optional").toggle();
+          $("#css-text").toggle();
+        };
       });
       $("#versatility").click(function() {
         $("#server-choice").fadeOut();
         $("#result").fadeIn();
         $("#php-text").toggle();
+        if (preferCss) {
+          $("#css-optional").toggle();
+          $("#css-text").toggle();
+        };
       });
     });
-    if (preferCss) {
-      $("#css-optional").toggle();
-      $("#css-text").toggle();
-    };
 
     $("#result-text").text("Alrighty " + name + ", this is what I've got for you: ");
 
