@@ -1,14 +1,16 @@
-var name;
+var name = "";
 var preferCss = false;
-var atBack = false;
 $(document).ready(function() {
   $("#page-body").children("div").toggle();
-  $("#name-in").click(function() {
+  $("body").click(function() {
     $("#questions").fadeOut();
     $("#intro").fadeOut();
   });
   $("#name-form").submit(function(event) {
     name = $("#name-in").val();
+    if (name === "") {
+      name = "Blanky McBlankerson"
+    };
     $("#nf-holder").fadeOut();
     $("#start").fadeIn();
     $("#front").click(function() {
@@ -16,50 +18,55 @@ $(document).ready(function() {
       $("#f-choice").fadeIn();
       $("#layout").click(function() {
         $("#f-choice").fadeOut();
-        $("#css-text").fadeIn();
+        $("#result").fadeIn();
+        $("#css-text").toggle();
 
       });
       $("#engine").click(function() {
         $("#f-choice").fadeOut();
         $("#b-choice").fadeIn();
         preferCss = true;
-        atBack = true;
       });
     });
     $("#back").click(function() {
       $("#start").fadeOut();
       $("#b-choice").fadeIn();
     });
-    if (atBack) {
-      $("#app").click(function() {
-        $("#b-choice").fadeOut();
-        $("#app-choice").fadeIn();
-        $("#business").click(function() {
-          $("#app-choice").fadeOut();
-          $("#java-text").fadeIn();
-        });
-        $("#startup").click(function() {
-          $("#app-choice").fadeOut();
-          $("#ruby-text").fadeIn();
-        });
+
+    $("#app").click(function() {
+      $("#b-choice").fadeOut();
+      $("#app-choice").fadeIn();
+      $("#business").click(function() {
+        $("#app-choice").fadeOut();
+        $("#result").fadeIn();
+        $("#java-text").toggle();
       });
-      $("#server").click(function() {
-        $("#b-choice").fadeOut();
-        $("#server-choice").fadeIn();
-        $("#consistency").click(function() {
-          $("#server-choice").fadeOut();
-          $("#c-sharp-text").fadeIn();
-        });
-        $("#versatility").click(function() {
-          $("#server-choice").fadeOut();
-          $("#php-text").fadeIn();
-        });
+      $("#startup").click(function() {
+        $("#app-choice").fadeOut();
+        $("#result").fadeIn();
+        $("#ruby-text").toggle();
       });
-      if (preferCss) {
-        $("css-optional").show();
-        $("#css-text").show();
-      };
+    });
+    $("#server").click(function() {
+      $("#b-choice").fadeOut();
+      $("#server-choice").fadeIn();
+      $("#consistency").click(function() {
+        $("#server-choice").fadeOut();
+        $("#result").fadeIn();
+        $("#c-sharp-text").toggle();
+      });
+      $("#versatility").click(function() {
+        $("#server-choice").fadeOut();
+        $("#result").fadeIn();
+        $("#php-text").toggle();
+      });
+    });
+    if (preferCss) {
+      $("#css-optional").toggle();
+      $("#css-text").toggle();
     };
+
+    $("#result-text").text("Alrighty " + name + ", this is what I've got for you: ");
 
     event.preventDefault();
   });
