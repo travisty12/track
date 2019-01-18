@@ -24,8 +24,22 @@ body {
         font-size: 19pt;}
 }
 
-p:hover {
+p.choice:hover {
   animation: pulse 2s infinite linear;
+}
+
+p.return:hover {
+  background-image: radial-gradient(rgba(255,246,54,1), rgba(255,246,54,0));
+  animation: pulse 2s infinite linear;
+}
+
+#css-text p.return {
+  display: none;
+}
+
+p.return {
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .text-holder {

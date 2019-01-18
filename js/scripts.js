@@ -19,7 +19,8 @@ $(document).ready(function() {
       $("#layout").click(function() {
         $("#f-choice").fadeOut();
         $("#result").fadeIn();
-        $("#css-text").toggle();
+        $("#css-text").show();
+        $(".return").show();
 
       });
       $("#engine").click(function() {
@@ -39,19 +40,19 @@ $(document).ready(function() {
       $("#business").click(function() {
         $("#app-choice").fadeOut();
         $("#result").fadeIn();
-        $("#java-text").toggle();
+        $("#java-text").show();
         if (preferCss) {
-          $("#css-optional").toggle();
-          $("#css-text").toggle();
+          $("#css-optional").show();
+          $("#css-text").show();
         };
       });
       $("#startup").click(function() {
         $("#app-choice").fadeOut();
         $("#result").fadeIn();
-        $("#ruby-text").toggle();
+        $("#ruby-text").show();
         if (preferCss) {
-          $("#css-optional").toggle();
-          $("#css-text").toggle();
+          $("#css-optional").show();
+          $("#css-text").show();
         };
       });
     });
@@ -61,27 +62,33 @@ $(document).ready(function() {
       $("#consistency").click(function() {
         $("#server-choice").fadeOut();
         $("#result").fadeIn();
-        $("#c-sharp-text").toggle();
+        $("#c-sharp-text").show();
         if (preferCss) {
-          $("#css-optional").toggle();
-          $("#css-text").toggle();
+          $("#css-optional").show();
+          $("#css-text").show();
         };
       });
       $("#versatility").click(function() {
         $("#server-choice").fadeOut();
         $("#result").fadeIn();
-        $("#php-text").toggle();
+        $("#php-text").show();
         if (preferCss) {
-          $("#css-optional").toggle();
-          $("#css-text").toggle();
+          $("#css-optional").show();
+          $("#css-text").show();
         };
       });
     });
-
     $("#result-text").text("Alrighty " + name + ", this is what I've got for you: ");
-
+    $(".return").click(function() {
+      $("#result").children("div").hide();
+      $("#result-alert").show();
+      $("#result").fadeOut();
+      preferCss = false;
+      name = "";
+      $("#css-text").children("p.return").hide();
+      $("#nf-holder").fadeIn();
+      $("#name-in").val() = "";
+    });
     event.preventDefault();
   });
-
-
 });
