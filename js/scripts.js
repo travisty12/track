@@ -1,6 +1,14 @@
 var name = "";
 var preferCss = false;
 $(document).ready(function() {
+  $("#bottom-well-teaser").click(function() {
+    $("#bottom-well").fadeIn();
+    $("#bottom-well-teaser").fadeOut();
+  });
+  $("#bottom-well").click(function() {
+    $("#bottom-well").fadeOut();
+    $("#bottom-well-teaser").fadeIn();
+  });
   $("#page-body").children("div").toggle();
   $("body").click(function() {
     $("#questions").fadeOut();
