@@ -10,7 +10,7 @@ _Are you looking to learn some coding skills?_
 _Do you not know which path is right for you?_
 _By Golly, by Gosh! Do I have the page for you!_
 _Here's a lil' quiz to give some recommendations for a programming language, based on your preferences._
-_The logo at the top links to my GitHub page._
+_The logo at the top links to my portfolio, and the link at the bottom leads to my GitHub._
 
 ## Setup/Installation Requirements
 
